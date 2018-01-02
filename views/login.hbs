@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8">
+    <meta Http-Equiv="Cache-Control" Content="no-cache">
+    <meta Http-Equiv="Pragma" Content="no-cache">
+    <meta Http-Equiv="Expires" Content="0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="./styles/login.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<div class = "row" style="padding-top: 12px" >
+    <!--<form method="get" action="/logout">-->
+    <span class="col-md-1 col-m-4"><a href="/logout"><button id="logout" type="button" class="btn btn-primary" style="border: white">Logout</button></a></span>
+    <!--</form>-->
+</div>
+<img class="photo img-responsive" src="../images/profile-unknown-male.png" height="200" >
+<br><br>
+
+    <h3><div class="div1" style="text-align: center">Hello {{firstname}} {{lastname}} </div></h3>
+<input class="question form-control" id="question" placeholder="enter your question">
+<br>
+<button class="ask btn btn-primary actine center-block" id="ask">ask</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+<script>
+
+    $(function () {
+
+
+//        $('#logout').click(function () {
+//
+//            $.post('/logout', {}, function () {
+//                console.log("logged out");
+//            })
+//
+//        })
+
+
+        $('#ask').click(function () {
+            window.alert("your question will be answered asap");
+            console.log("entered");
+
+            var a = {
+                e: "{{emailid}}",
+                ques: $('#question').val()
+            };
+
+            $.get('/sendmail', a, function (data) {
+
+                console.log(data);
+
+            });
+
+            $('#question').val('');
+
+        });
+
+
+        $('#homepage').click(function () {
+            window.location.href = "/";
+        })
+    })
+
+
+
+</script>
+
+</body>
+
+</html>

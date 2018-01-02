@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>tourism</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="./styles/flights.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script  type="text/javascript" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./styles/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="./styles/bootstrap-datepicker.standalone.css">
+    <link rel="stylesheet" href="./styles/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="./styles/bootstrap-datepicker3.standalone.css">
+    <script src="./javascript/bootstrap-datepicker.js"></script>
+    <script src="./javascript/bootstrap-datepicker.min.js"></script>
+
+</head>
+<body>
+
+<div class = "row" style="padding-top: 12px" >
+    <span class="col-md-1 col-m-6">
+
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">About Us</a></li>
+                <li class="divider"></li>
+                <li id="flights"><a href="/flights">Flights</a></li>
+                <li id="hotels"><a href="/hotels">Hotels</a></li>
+                <li><a href="https://goalltrip.com/index">Homestays</a></li>
+                <li><a href="https://goalltrip.com/index">Holidays</a></li>
+                <li id="buses"><a href="/buses">Buses</a></li>
+            </ul>
+        </div>
+
+    </span>
+    <span class="col-md-2 col-m-6"><div>
+        <a href="#" data-toggle="tooltip" title="Make account for any query"><button id="signup" type="button" class="btn btn-primary" style="border: white">Create Account</button></a>
+    </div></span>
+    <span class="col-md-4 col-m-12"><input placeholder = "e-mail id" id="signedinemailid" style="width: 100%"></span>
+    <span class="col-md-4 col-m-12"><input placeholder = "password" type = "password" id="signedinpassword" style="width: 100%"></span>
+    <span class="col-md-1 col-m-12"><button id="login" type="button" class="btn btn-primary" style="border: white">Login</button></span>
+
+</div>
+
+<div class="container">
+
+    <div class="col-md-6">
+        <label for="origin">Enter Origin</label>
+        <br>
+        <form id="bloodhound">
+        <input id="origin" type="text" class="typeahead form-control" autocomplete="off" spellcheck="false">
+        </form>
+    </div>
+
+
+    <div class="col-md-6">
+        <label for="destination">Enter Destination</label>
+        <br>
+        <form id="bloodhound">
+        <input  id="destination" type="text" class="typeahead1 form-control" autocomplete="off" spellcheck="false">
+        </form>
+    </div>
+
+    <div class="col-md-3 col-m-3">
+        <label for="check-in date">Check-in Date</label>
+        <br>
+        <input type="text" class="datepicker form-control" id="checkindate" autocomplete="off" spellcheck="false">
+    </div>
+
+    <div class="col-md-3 col-m-3">
+        <label for="check-out date">Check-out Date</label>
+        <br>
+        <input type="text" class="datepicker form-control" id="checkoutdate" autocomplete="off" spellcheck="false">
+    </div>
+
+    <div class="col-md-3 col-m-3">
+        <label for="adults">No. of adults</label>
+        <br>
+        <input id="adults" type = "number" class="form-control">
+    </div>
+
+    <div class="col-md-3 col-m-3">
+        <label for="children">No. of children</label>
+        <br>
+        <input id="children" type = "number" class="form-control">
+    </div>
+
+
+</div>
+
+<p class="text-center alert-info">**Number of people should be less than 9.
+<br>
+**Fill only current or future dates.</p>
+
+<button id="checkflights" type="button" class="btn btn-primary center-block" style="margin-top: 2%">Check Flights</button>
+<hr>
+<h3 class="text-center"><strong><a href="https://goalltrip.com/index">BOOK FLIGHTS</a></strong></h3>
+
+
+<script src="./javascript/flights.js"></script>
+<script src="./javascript/signup.js"></script>
+
+<script>
+
+    $('#signup').click(function() {
+        window.location.href = "/signup";
+    });
+
+    $('#flights').click(function () {
+        window.location.href = "/flights";
+    });
+
+    $('#buses').click(function () {
+        window.location.href = "/buses";
+    });
+
+    $('#hotels').click(function () {
+        window.location.href = "/hotels";
+    });
+
+    $('#trains').click(function () {
+        window.location.href = "/trains";
+    });
+</script>
+
+
+</body>
+</html>

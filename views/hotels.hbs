@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>tourism</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="./styles/hotels.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script  type="text/javascript" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./styles/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="./styles/bootstrap-datepicker.standalone.css">
+    <link rel="stylesheet" href="./styles/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="./styles/bootstrap-datepicker3.standalone.css">
+    <script src="./javascript/bootstrap-datepicker.js"></script>
+    <script src="./javascript/bootstrap-datepicker.min.js"></script>
+
+</head>
+<body>
+<div class = "row1" style="padding-top: 12px" >
+    <span class="col-md-1 col-m-6">
+
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">About Us</a></li>
+                <li class="divider"></li>
+                <li id="flights"><a href="/flights">Flights</a></li>
+                <li><a href="/hotels">Hotels</a></li>
+                <li><a href="https://goalltrip.com/index">Homestays</a></li>
+                <li><a href="https://goalltrip.com/index">Holidays</a></li>
+                <li id="buses"><a href="#">Buses</a></li>
+            </ul>
+        </div>
+
+    </span>
+    <span class="col-md-2 col-m-6"><div>
+        <a href="#" data-toggle="tooltip" title="Make account for any query"><button id="signup" type="button" class="btn btn-primary" style="border: white">Create Account</button></a>
+    </div></span>
+    <span class="col-md-4 col-m-12"><input placeholder = "e-mail id" id="signedinemailid" style="width: 100%"></span>
+    <span class="col-md-4 col-m-12"><input placeholder = "password" type = "password" id="signedinpassword" style="width: 100%"></span>
+    <span class="col-md-1 col-m-12"><button id="login" type="button" class="btn btn-primary" style="border: white">Login</button></span>
+
+</div>
+
+<h3 class="text-center"><strong><a href="https://goalltrip.com/index">BOOK HOTELS</a></strong></h3>
+
+<hr>
+<div class="row container">
+
+    <div id="controls" class="col">
+        <select id="country" class="selectpicker form-control">
+            <option>Select area....</option>
+            <option value="all">All</option>
+        </select>
+    </div>
+
+<div id="locationField" class="col">
+    <input id="autocomplete" placeholder="Enter a city" type="text" class="form-control"/>
+</div>
+
+
+</div>
+
+
+<div id="map"></div>
+
+<div id="listing">
+    <table id="resultsTable">
+        <tbody id="results"></tbody>
+    </table>
+</div>
+
+<div style="display: none">
+    <div id="info-content">
+        <table>
+            <tr id="iw-url-row" class="iw_table_row">
+                <td id="iw-icon" class="iw_table_icon"></td>
+                <td id="iw-url"></td>
+            </tr>
+            <tr id="iw-address-row" class="iw_table_row">
+                <td class="iw_attribute_name">Address:</td>
+                <td id="iw-address"></td>
+            </tr>
+            <tr id="iw-phone-row" class="iw_table_row">
+                <td class="iw_attribute_name">Telephone:</td>
+                <td id="iw-phone"></td>
+            </tr>
+            <tr id="iw-rating-row" class="iw_table_row">
+                <td class="iw_attribute_name">Rating:</td>
+                <td id="iw-rating"></td>
+            </tr>
+            <tr id="iw-website-row" class="iw_table_row">
+                <td class="iw_attribute_name">Website:</td>
+                <td id="iw-website"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+
+
+<script src="./javascript/hotelmap.js"></script>
+<script src="./javascript/hotels.js"></script>
+<script src="./javascript/signup.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCub-H1TMt32RHDU4KCNbppAn3reMdkcw&libraries=places&callback=initMap"
+        async defer></script>
+
+
+<script>
+
+    $('#signin').click(function() {
+        window.location.href = "/signup";
+    });
+
+    $('#flights').click(function () {
+        window.location.href = "/flights";
+    });
+
+    $('#buses').click(function () {
+        window.location.href = "/buses";
+    });
+
+    $('#hotels').click(function () {
+        window.location.href = "/hotels";
+    });
+
+    $('#trains').click(function () {
+        window.location.href = "/trains";
+    });
+
+</script>
+
+
+</body>
+</html>

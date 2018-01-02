@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="./styles/index.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class = "row" style="padding-top: 12px" >
+    <span class="col-md-1 col-m-6">
+
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">About Us</a></li>
+                <li class="divider"></li>
+                <li id="flights"><a href="#">Flights</a></li>
+                <li id="hotels"><a href="#">Hotels</a></li>
+                <li><a href="https://goalltrip.com/index">Homestays</a></li>
+                <li><a href="https://goalltrip.com/index">Holidays</a></li>
+                <li id="buses"><a href="#">Buses</a></li>
+            </ul>
+        </div>
+
+    </span>
+    <span class="col-md-2 col-m-6"><div>
+        <a href="#" data-toggle="tooltip" title="Make account for any query"><button id="signup" type="button" class="btn btn-primary" style="border: white">Create Account</button></a>
+    </div></span>
+    <span class="col-md-4 col-m-12"><input placeholder = "e-mail id" id="signedinemailid" style="width: 100%"></span>
+    <span class="col-md-4 col-m-12"><input placeholder = "password" type = "password" id="signedinpassword" style="width: 100%"></span>
+    <span class="col-md-1 col-m-12"><button id="login" type="button" class="btn btn-primary" style="border: white">Login</button></span>
+
+</div>
+
+
+<div>
+<div class="parallax1"></div>
+<div style="height:150px;background-color:midnightblue;text-align: center;color: white;font-size: 400%"><a href="/flights"><i style="color: white" onMouseOver="this.style.cursor='pointer'">FLIGHTS</i></a></div>
+<div class="parallax2"></div>
+<div style="height:150px;background-color:midnightblue;text-align: center;color: white;font-size: 400%"><a href="/hotels"><i style="color: white" onMouseOver="this.style.cursor='pointer'">HOTELS</i></a></div>
+<div class="parallax3"></div>
+<div style="height:150px;background-color:midnightblue;text-align: center;color: white;font-size: 400%"><a href="https://goalltrip.com/index"><i style="color: white" onMouseOver="this.style.cursor='pointer'">HOMESTAYS</i></a></div>
+<div class="parallax4"></div>
+<div style="height:150px;background-color:midnightblue;text-align: center;color: white;font-size: 400%"><a href="https://goalltrip.com/index"><i style="color: white" onMouseOver="this.style.cursor='pointer'">HOLIDAYS</i></a></div>
+<div class="parallax6"></div>
+<div style="height:150px;background-color:midnightblue;text-align: center;color: white;font-size: 400%"><a href="/buses"><i style="color: white" onMouseOver="this.style.cursor='pointer'">BUSES</i></a></div>
+</div>
+<script src="./javascript/signup.js"></script>
+<script>
+
+    $(document).ready(function(){
+//        $('[data-toggle="tooltip"]').tooltip();
+
+        $('#signup').click(function () {
+            window.location.href='/signup';
+        });
+
+        $('#flights').click(function () {
+            window.location.href='/flights';
+        });
+
+        $('#buses').click(function () {
+            window.location.href='/buses';
+        });
+
+        $('#hotels').click(function () {
+            window.location.href='/hotels';
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="./styles/showbuses.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class = "row" style="padding-top: 12px" >
+    <span class="col-md-1 col-m-6">
+
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">About Us</a></li>
+                <li class="divider"></li>
+                <li id="flights"><a href="/flights">Flights</a></li>
+                <li><a href="/hotels">Hotels</a></li>
+                <li><a href="https://goalltrip.com/index">Homestays</a></li>
+                <li><a href="https://goalltrip.com/index">Holidays</a></li>
+                <li id="buses"><a href="/buses">Buses</a></li>
+            </ul>
+        </div>
+
+    </span>
+    <span class="col-md-2 col-m-6"><div>
+        <a href="#" data-toggle="tooltip" title="Make account for any query"><button id="signup" type="button" class="btn btn-primary" style="border: white">Create Account</button></a>
+    </div></span>
+    <span class="col-md-4 col-m-12"><input placeholder = "e-mail id" id="signedinemailid" style="width: 100%"></span>
+    <span class="col-md-4 col-m-12"><input placeholder = "password" type = "password" id="signedinpassword" style="width: 100%"></span>
+    <span class="col-md-1 col-m-12"><button id="login" type="button" class="btn btn-primary" style="border: white">Login</button></span>
+
+</div>
+
+<br>
+
+<strong><h1>{{source}} ------> {{destination}}</h1></strong>
+{{#each info_onward as |info1|}}
+    <br>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+
+            <tr class="info">
+                <td><strong>Airline</strong></td>
+                <td>:</td>
+                <td>{{info1.airline}}</td>
+            </tr>
+            <tr class="info">
+                <td><strong>Departure Date</strong></td>
+                <td>:</td>
+                <td>{{info1.depdate}}</td>
+            </tr>
+            <tr class="info">
+                <td><strong>Departure Terminal</strong></td>
+                <td>:</td>
+                <td>{{info1.depterminal}}</td>
+            </tr>
+
+            <tr class="info">
+                <td><strong>Arrival Date</strong></td>
+                <td>:</td>
+                <td>{{info1.arrdate}}</td>
+            </tr>
+            <tr class="info">
+                <td><strong>Arrival Time</strong></td>
+                <td>:</td>
+                <td>{{info1.arrtime}} </td>
+            </tr>
+            <tr class="info">
+                <td><strong>Arrival Terminal</strong></td>
+                <td>:</td>
+                <td>{{info1.arrterminal}}</td>
+            </tr>
+            <tr class="info">
+                <td><strong>Total fare</strong></td>
+                <td>:</td>
+                <td>{{info1.fare.totalfare}} </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--<button id="book" type="button" class="btn btn-primary">Book</button>-->
+
+    <!--<br>-->
+
+{{/each}}
+
+</body>
+</html>
